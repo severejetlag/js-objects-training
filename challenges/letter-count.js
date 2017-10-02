@@ -31,3 +31,29 @@
 */
 
 // YOUR CODE HERE
+function letterCount(string){
+  string = string.toLowerCase()
+  let stringArr = string.split('');
+  stringArr = stringArr.sort()
+  let countLetters = 0; 
+  let currentLetter = stringArr[0];
+  let outcome = {};
+  stringArr.forEach(function(letter,index){
+    if(stringArr[index] !== currentLetter){
+      countLetters = 1;
+      currentLetter = stringArr[index];
+    }else{
+      countLetters++;
+    }
+    outcome[currentLetter] = countLetters;
+  })
+  console.log(outcome);
+}
+
+var string = "AAAaaapple";
+
+letterCount(string);
+
+
+
+
