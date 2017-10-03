@@ -38,3 +38,31 @@
 */
 
 // YOUR CODE HERE
+
+var table = [ null, null, null,{steps: 0}];
+let count=0; 
+function pingPong(table){
+  for(let i = 0; i < table.length; i++){
+      if(table[i] !== null && i < table.length-1 ){
+        count++;
+        table[i].steps = count;
+        table[i+1]=table[i];
+        table[i]=null;
+        break;
+      }else if(table[i] !== null){
+        count++;
+        table[i].steps = count;
+        table[0]=table[i];
+        table[i]=null;
+        break;
+      }
+  }
+  console.log(table);
+}
+console.log(table);
+pingPong(table);
+pingPong(table);
+pingPong(table);
+
+
+
