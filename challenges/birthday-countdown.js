@@ -34,3 +34,22 @@
 */
 
 // YOUR CODE HERE
+let currentDate = new Date();
+
+let testBirthDate = '10/31/2013';
+let birthday = new Date(testBirthDate);
+console.log(birthday.getMonth())
+console.log(birthday.getDay())
+
+let difference = birthday.getTime() - currentDate.getTime();
+
+console.log(Math.round(difference/(1000*60*60*24)));
+
+
+
+
+
+
+
+
+

@@ -45,3 +45,20 @@
 */
 
 // YOUR CODE HERE
+function queryParse(string){
+  let paramArr = string.split("&");
+  let parsedQuery = {};
+  paramArr.forEach(function(pair,index){
+    let pairArr = pair.split('=');
+    parsedQuery[pairArr[0]] = pairArr[1];
+  })
+  console.log(parsedQuery);
+}
+
+let string = 'a=apple&b=beet&b=blueberry&c=&d=10';
+queryParse(string);
+
+
+
+
+
